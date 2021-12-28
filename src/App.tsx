@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import FormComponent from "./components/FormComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const banner = require('./img/banner.png');
+    const back = require('./img/Stroke 3.png');
+
+    return (
+        <div className="App">
+            <div className="mobileHeader">
+                <img className="App_backIcon" src={back} alt="back"/>
+            </div>
+            <FormComponent/>
+            <div className='App_items'>
+                <div className='App_text'>
+                    <p>Представляем</p>
+                    <h1>Все лучшее впереди</h1>
+                </div>
+                <img className='App_items_img' src={String(banner)} alt="banner"/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
